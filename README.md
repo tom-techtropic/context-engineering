@@ -12,7 +12,7 @@ git clone https://github.com/coleam00/Context-Engineering-Intro.git
 cd Context-Engineering-Intro
 
 # 2. Set up your project rules (optional - template provided)
-# Edit CLAUDE.md to add your project-specific guidelines
+# Edit GEMINI.md to add your project-specific guidelines
 
 # 3. Add examples (highly recommended)
 # Place relevant code examples in the examples/ folder
@@ -21,12 +21,12 @@ cd Context-Engineering-Intro
 # Edit INITIAL.md with your feature requirements
 
 # 5. Generate a comprehensive PRP (Product Requirements Prompt)
-# In Claude Code, run:
-/generate-prp INITIAL.md
+# This is an internal workflow for Gemini. You would typically instruct Gemini to:
+# "Generate a PRP for the feature described in INITIAL.md"
 
 # 6. Execute the PRP to implement your feature
-# In Claude Code, run:
-/execute-prp PRPs/your-feature-name.md
+# This is an internal workflow for Gemini. You would typically instruct Gemini to:
+# "Implement the feature described in PRPs/your-feature-name.md"
 ```
 
 ## 📚 Table of Contents
@@ -66,17 +66,16 @@ Context Engineering represents a paradigm shift from traditional prompt engineer
 
 ```
 context-engineering-intro/
-├── .claude/
+├── .gemini/
 │   ├── commands/
 │   │   ├── generate-prp.md    # Generates comprehensive PRPs
 │   │   └── execute-prp.md     # Executes PRPs to implement features
-│   └── settings.local.json    # Claude Code permissions
 ├── PRPs/
 │   ├── templates/
 │   │   └── prp_base.md       # Base template for PRPs
 │   └── EXAMPLE_multi_agent_prp.md  # Example of a complete PRP
 ├── examples/                  # Your code examples (critical!)
-├── CLAUDE.md                 # Global rules for AI assistant
+├── GEMINI.md                 # Global rules for AI assistant
 ├── INITIAL.md               # Template for feature requests
 ├── INITIAL_EXAMPLE.md       # Example feature request
 └── README.md                # This file
@@ -86,9 +85,9 @@ This template doesn't focus on RAG and tools with context engineering because I 
 
 ## Step-by-Step Guide
 
-### 1. Set Up Global Rules (CLAUDE.md)
+### 1. Set Up Global Rules (GEMINI.md)
 
-The `CLAUDE.md` file contains project-wide rules that the AI assistant will follow in every conversation. The template includes:
+The `GEMINI.md` file contains project-wide rules that the AI assistant will follow in every conversation. The template includes:
 
 - **Project awareness**: Reading planning docs, checking tasks
 - **Code structure**: File size limits, module organization
@@ -129,9 +128,9 @@ PRPs (Product Requirements Prompts) are comprehensive implementation blueprints 
 
 They are similar to PRDs (Product Requirements Documents) but are crafted more specifically to instruct an AI coding assistant.
 
-Run in Claude Code:
-```bash
-/generate-prp INITIAL.md
+Run this as an instruction to Gemini:
+```
+Generate a PRP for INITIAL.md
 ```
 
 **Note:** The slash commands are custom commands defined in `.claude/commands/`. You can view their implementation:
@@ -145,21 +144,6 @@ This command will:
 2. Research the codebase for patterns
 3. Search for relevant documentation
 4. Create a comprehensive PRP in `PRPs/your-feature-name.md`
-
-### 4. Execute the PRP
-
-Once generated, execute the PRP to implement your feature:
-
-```bash
-/execute-prp PRPs/your-feature-name.md
-```
-
-The AI coding assistant will:
-1. Read all context from the PRP
-2. Create a detailed implementation plan
-3. Execute each step with validation
-4. Run tests and fix any issues
-5. Ensure all success criteria are met
 
 ## Writing Effective INITIAL.md Files
 
@@ -190,7 +174,34 @@ The AI coding assistant will:
 
 ### How /generate-prp Works
 
-The command follows this process:
+The `generate-prp` process follows this:
+
+1. **Research Phase**
+   - Analyzes your codebase for patterns
+   - Searches for similar implementations
+   - Identifies conventions to follow
+
+2. **Documentation Gathering**
+   - Fetches relevant API docs
+   - Includes library documentation
+   - Adds gotchas and quirks
+
+3. **Blueprint Creation**
+   - Creates step-by-step implementation plan
+   - Includes validation gates
+   - Adds test requirements
+
+4. **Quality Check**
+   - Ensures all context is included
+
+### How `execute-prp` Works
+
+1. **Load Context**: Reads the entire PRP
+2. **Plan**: Creates detailed task list
+3. **Execute**: Implements each component
+4. **Validate**: Runs tests and linting
+5. **Iterate**: Fixes any issues found
+6. **Complete**: Ensures all requirements met
 
 1. **Research Phase**
    - Analyzes your codebase for patterns
@@ -285,7 +296,7 @@ examples/
 - Add MCP server resources
 - Reference specific documentation sections
 
-### 5. Customize CLAUDE.md
+### 5. Customize GEMINI.md
 - Add your conventions
 - Include project-specific rules
 - Define coding standards

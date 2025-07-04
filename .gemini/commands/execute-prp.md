@@ -15,8 +15,7 @@ Implement a feature using using the PRP file.
 
 2. **ULTRATHINK**
    - Think hard before you execute the plan. Create a comprehensive plan addressing all requirements.
-   - Break down complex tasks into smaller, manageable steps using your todos tools.
-   - Use the TodoWrite tool to create and track your implementation plan.
+   - Break down complex tasks into smaller, manageable steps.
    - Identify implementation patterns from existing code to follow.
 
 3. **Execute the plan**
@@ -33,8 +32,5 @@ Implement a feature using using the PRP file.
    - Run final validation suite
    - Report completion status
    - Read the PRP again to ensure you have implemented everything
-
-6. **Reference the PRP**
-   - You can always reference the PRP again if needed
 
 Note: If validation fails, use error patterns in PRP to fix and retry.
