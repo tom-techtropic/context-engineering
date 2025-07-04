@@ -11,6 +11,7 @@
     - `agent.py` - Main agent definition and execution logic 
     - `tools.py` - Tool functions used by the agent 
     - `prompts.py` - System prompts
+- **Place new files in feature-appropriate subdirectories** rather than the root directory, to maintain project organization.
 - **Use clear, consistent imports** (prefer relative imports within packages).
 - **Use clear, consistent imports** (prefer relative imports within packages).
 - **Use python_dotenv and load_env()** for environment variables.

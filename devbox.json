@@ -4,7 +4,9 @@
     "python3Packages.ruff",
     "python3Packages.mypy",
     "python3Packages.pytest",
-    "python3@latest"
+    "python3Packages.fastapi",
+    "python3@latest",
+    "python3Packages.uvicorn"
   ],
   "shell": {
     "init_hook": [

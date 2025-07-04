@@ -62,6 +62,20 @@
         }
       }
     },
+    "python3Packages.fastapi": {
+      "resolved": "github:NixOS/nixpkgs/d55716bb59b91ae9d1ced4b1ccdea7a442ecbfdb?narHash=sha256-QWJ%2BNQbMU%2BNcU2xiyo7SNox1fAuwksGlQhpzBl76g1I%3D#python3Packages.fastapi",
+      "source": "nixpkg",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "path": "/nix/store/bi7bzdcc84k9xbvg9s6d1ph8cv5vdi7j-python3.13-fastapi-0.115.12",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
     "python3Packages.mypy": {
       "resolved": "github:NixOS/nixpkgs/d55716bb59b91ae9d1ced4b1ccdea7a442ecbfdb?narHash=sha256-QWJ%2BNQbMU%2BNcU2xiyo7SNox1fAuwksGlQhpzBl76g1I%3D#python3Packages.mypy",
       "source": "nixpkg",
@@ -98,6 +112,20 @@
           "outputs": [
             {
               "path": "/nix/store/qpdrc7c38cin7kp66hz8xdqvc7m69gm6-python3.13-ruff-0.12.1",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "python3Packages.uvicorn": {
+      "resolved": "github:NixOS/nixpkgs/d55716bb59b91ae9d1ced4b1ccdea7a442ecbfdb?narHash=sha256-QWJ%2BNQbMU%2BNcU2xiyo7SNox1fAuwksGlQhpzBl76g1I%3D#python3Packages.uvicorn",
+      "source": "nixpkg",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "path": "/nix/store/qnnlvsvwzlnvs7gs5d7pd0lw4bfp3x4q-python3.13-uvicorn-0.34.2",
               "default": true
             }
           ]
